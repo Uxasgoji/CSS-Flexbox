@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Flexbox</title>
+<style type="text/css">
+@import url("flexbox.css");
+</style>
+</head>
+
+<body>
+	<style>
+		.flex-container {
+			display:flex;
+			flex-wrap:wrap;
+			background-color: red;}
+		.flex-container > div {
+			background-color: antiquewhite;
+			margin: 5px;
+			padding: 10px;
+			font-size: 20px;
+		}
+		.stack > div {
+			flex-direction: column;
+			padding: 10px;
+		}
+		#container {
+			width:500px;
+			margin:0 auto;
+		}
+		.section_L {
+			flex-grow: 2;
+		}
+		.section_R {
+			flex-grow: 2;
+		}
+		.flex-responsive {
+			flex: 40%;
+		}
+		
+		@media (max-width: 499px) {
+			#container {
+				width: 70%;
+				margin: 0 auto;
+				background-color: orange;
+			}
+		}
+		.flex-responsive {
+			flex: 100%;
+		}
+	</style>
+	<div class="flex-container">
+		<div class="Column-a">
+			<h3>Column A</h3>
+			<p>Miscellaneous text and whatnot.</p></div>
+		<div class="column-b">
+			<h3>Column B</h3>
+			<p>More random text.</p></div>
+		<div class="column-c">
+			<h3>Column C</h3>
+			<p>Even more pointless text.</p></div>
+	</div>
+</body>
+</html>
